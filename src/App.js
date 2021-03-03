@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Balance from "./Components/Balance/Balance";
+import Navbar from "./Components/Navbar/Navbar";
+import History from "./Components/History/History";
+import Transaction from "./Components/Transaction/Transaction";
+import { Layout } from "./globalstyles";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Navbar />
+      <Layout>
+        <Balance />
+        <History />
+        <Transaction />
+        <p style={{ textAlign: "center" }}>&copy; Coded By Digvijay</p>
+      </Layout>
+    </main>
   );
 }
 
